@@ -1,0 +1,159 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #e6d7ff;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+th,
+td {
+  padding: 8px;
+  font-size: 32px;
+  text-align: center;
+}
+
+th {
+  background-color: #484949;
+  color: white;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+td {
+  color: black;
+}
+
+form {
+  display: flex;
+  gap: 5px;
+}
+
+form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+form * {
+  font-size: 28px;
+}
+
+table tr:hover {
+  background-color: #87ceeb;
+  color: black;
+}
+table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* new */
+button {
+  height: 4rem;
+  width: 5rem;
+  font-size: 1.5rem;
+  margin: 3px;
+  padding: 3px;
+  border-radius: 12px;
+  background-color: #303033;
+  color: white;
+  text-align: center;
+}
+input {
+  margin: 0.5rem;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+input::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 35px;
+}
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: black;
+}
+.hClass {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  color: black;
+}
+.allInputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #484949;
+  border-radius: 2rem;
+  margin-top: 0.5rem;
+}
+
+.allInputs input {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 35px;
+}
+.btn-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-2 button {
+  background-color: #303033;
+  color: white;
+  width: 45%;
+  height: 75px;
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+span {
+  color: red;
+  font-size: 35px;
+}
+.container input {
+  width: 50%;
+}
+.container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container input::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+.container input {
+  font-size: 50px;
+}
