@@ -95,10 +95,6 @@ function App() {
 
 export default App;
 
-
-
-
-
 // import { useState } from "react";
 // import "./App.css";
 // import data from "./mock-data.json";
@@ -249,4 +245,3 @@ export default App;
 // }
 
 // export default App;
-
