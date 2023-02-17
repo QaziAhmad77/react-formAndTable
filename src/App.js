@@ -3,6 +3,8 @@ import "./App.css";
 import data from "./raw-data.json";
 import Form from "./components/Form";
 import Table from "./components/Table";
+import User from "./components/User";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [list, setList] = useState(data);
@@ -44,8 +46,7 @@ function App() {
     newArray[fieldName] = fieldValue;
     setAddData(newArray);
   };
-  const updateUser = (event) => {
-    event.preventDefault();
+  const updateUser = () => {
     const index = list.findIndex((listItem) => listItem.id === id);
     const newData = [...list];
     if (!errors.name && !errors.email && !errors.password) {
@@ -53,8 +54,7 @@ function App() {
       setList(newData);
     }
   };
-  const addUser = (event) => {
-    event.preventDefault();
+  const addUser = () => {
     const newErrors = { ...errors }; // make a copy of the errors object
     if (addData.name.length < 3) {
       newErrors.name = true;
@@ -85,10 +85,18 @@ function App() {
   };
   return (
     <>
-      <body>
-        <Form addData={addData} handleOnchange={handleOnchange} errors={errors} addUser={addUser} updateUser={updateUser} setErrors={setErrors} emailRegex={emailRegex} />
-        <Table setSearch={setSearch} list={list} search={search} setAddData={setAddData} setId={setId} deleteUser={deleteUser} />
-      </body>
+      <BrowserRouter>
+        <body>
+          <Routes>
+            <Route
+              path="/"
+              element={<Form addData={addData} handleOnchange={handleOnchange} errors={errors} addUser={addUser} updateUser={updateUser} setErrors={setErrors} emailRegex={emailRegex} />}
+            />
+            <Route path="/table" element={<Table setSearch={setSearch} list={list} search={search} setAddData={setAddData} setId={setId} deleteUser={deleteUser} />} />
+            <Route path="/user/:id" element={<User addData={addData} setAddData={setAddData} />} />
+          </Routes>
+        </body>
+      </BrowserRouter>
     </>
   );
 }
